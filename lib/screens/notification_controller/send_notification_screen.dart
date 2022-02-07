@@ -2,9 +2,11 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:miraath/helpers/helpers.dart';
 import 'package:miraath/screens/notification_controller/fb_notifications.dart';
 import 'package:miraath/widgets/text_app.dart';
+import 'package:miraath/helpers/helpers.dart';
+
+import 'fb_notifications.dart';
 
 class SendNotificationScreen extends StatefulWidget {
   const SendNotificationScreen({Key? key}) : super(key: key);
@@ -44,7 +46,6 @@ class _SendNotificationScreenState extends State<SendNotificationScreen>
         centerTitle: true,
         title: TextApp(
           text: "الاشعارات",
-
           fontSize: 25.sp,
           fontColor: Colors.white,
         ),
@@ -62,8 +63,20 @@ class _SendNotificationScreenState extends State<SendNotificationScreen>
                     controller: _titleEditController,
                     keyboardType: TextInputType.text,
                     textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontFamily: "Amiri",
+                      fontSize: 23.sp,
+                    ),
                     decoration: InputDecoration(
                       hintText: "عنوان الاشعار",
+                      labelStyle: TextStyle(
+                        fontFamily: "Amiri",
+                        fontSize: 23.sp,
+                      ),
+                      hintStyle: TextStyle(
+                        fontFamily: "Amiri",
+                        fontSize: 20.sp,
+                      ),
                       prefixIcon: const Icon(Icons.title),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.sp),
@@ -83,8 +96,20 @@ class _SendNotificationScreenState extends State<SendNotificationScreen>
                     textAlign: TextAlign.start,
                     minLines: 3,
                     maxLines: 5,
+                    style: TextStyle(
+                      fontFamily: "Amiri",
+                      fontSize: 23.sp,
+                    ),
                     decoration: InputDecoration(
                         hintText: "موضوع الاشعار",
+                        labelStyle: TextStyle(
+                          fontFamily: "Amiri",
+                          fontSize: 23.sp,
+                        ),
+                        hintStyle: TextStyle(
+                          fontFamily: "Amiri",
+                          fontSize: 20.sp,
+                        ),
                         prefixIcon: const Icon(Icons.subtitles),
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.sp),
@@ -106,7 +131,7 @@ class _SendNotificationScreenState extends State<SendNotificationScreen>
                         _subTitleEditController.text.trim());
                     showSnackBar(
                       context: context,
-                      message: "تم ادسال الاشعار",
+                      message: "تم ارسال الاشعار",
                       error: false,
                     );
 
@@ -114,12 +139,11 @@ class _SendNotificationScreenState extends State<SendNotificationScreen>
                   } else {
                     showSnackBar(
                       context: context,
-                      message: "فشل ارسال الاشعار",
+                      message: "تم ارسال الاشعار",
                       error: true,
                     );
                   }
                 },
-
                 label: TextApp(
                   text: "ارسال الاشعار",
                   fontSize: 20.sp,
