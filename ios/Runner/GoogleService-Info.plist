@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>218074684430-e6emnf6sgvnmv915fjgr7g76ar55nhk1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.218074684430-e6emnf6sgvnmv915fjgr7g76ar55nhk1</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>218074684430-nhf60snj0em3h2s0mav7vfh6bovi3va4.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB_fFcbT9DAy1Nv4DeadfTnVmKpnO6Vpxg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>218074684430</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.app.miraath</string>
+	<key>PROJECT_ID</key>
+	<string>mirath-54af3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mirath-54af3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:218074684430:ios:9fd7d3a86b9578bc99f05f</string>
+	<key>DATABASE_URL</key>
+	<string>https://mirath-54af3.firebaseio.com</string>
+</dict>
+</plist>
