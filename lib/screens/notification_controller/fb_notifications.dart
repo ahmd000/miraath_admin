@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -53,12 +54,14 @@ mixin FbNotifications {
         ?.createNotificationChannel(channel);
 
     //iOS Notification Setup (FOREGROUND)
-    await FirebaseMessaging.instance
+    Platform.isIOS
+        ? await FirebaseMessaging.instance
         .setForegroundNotificationPresentationOptions(
       alert: true,
       badge: true,
       sound: true,
-    );
+    )
+        : null;
   }
 
   //iOS Notification Permission
