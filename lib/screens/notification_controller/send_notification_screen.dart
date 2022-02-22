@@ -1,11 +1,11 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:miraath/screens/notification_controller/fb_notifications.dart';
 import 'package:miraath/widgets/text_app.dart';
 import 'package:miraath/helpers/helpers.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+
 import 'fb_notifications.dart';
 
 class SendNotificationScreen extends StatefulWidget {
@@ -63,13 +63,18 @@ class _SendNotificationScreenState extends State<SendNotificationScreen>
                     controller: _titleEditController,
                     keyboardType: TextInputType.text,
                     textAlign: TextAlign.start,
-                    style: GoogleFonts.amiri(
+                    style: TextStyle(
+                      fontFamily: "Amiri",
                       fontSize: 23.sp,
                     ),
                     decoration: InputDecoration(
                       hintText: "عنوان الاشعار",
-
-                      hintStyle: GoogleFonts.amiri(
+                      labelStyle: TextStyle(
+                        fontFamily: "Amiri",
+                        fontSize: 23.sp,
+                      ),
+                      hintStyle: TextStyle(
+                        fontFamily: "Amiri",
                         fontSize: 20.sp,
                       ),
                       prefixIcon: const Icon(Icons.title),
@@ -97,9 +102,12 @@ class _SendNotificationScreenState extends State<SendNotificationScreen>
                     ),
                     decoration: InputDecoration(
                         hintText: "موضوع الاشعار",
-
-                        hintStyle: GoogleFonts.amiri(
-
+                        labelStyle: TextStyle(
+                          fontFamily: "Amiri",
+                          fontSize: 23.sp,
+                        ),
+                        hintStyle: TextStyle(
+                          fontFamily: "Amiri",
                           fontSize: 20.sp,
                         ),
                         prefixIcon: const Icon(Icons.subtitles),
@@ -119,11 +127,8 @@ class _SendNotificationScreenState extends State<SendNotificationScreen>
                 onPressed: () {
                   if (_titleEditController.text.isNotEmpty &&
                       _subTitleEditController.text.isNotEmpty) {
-
-
                     sendGeneralNotify(_titleEditController.text.trim(),
                         _subTitleEditController.text.trim());
-
                     showSnackBar(
                       context: context,
                       message: "تم ارسال الاشعار",
@@ -134,7 +139,7 @@ class _SendNotificationScreenState extends State<SendNotificationScreen>
                   } else {
                     showSnackBar(
                       context: context,
-                      message: "برجاء ملئ الحقول " ,
+                      message: "تم ارسال الاشعار",
                       error: true,
                     );
                   }
